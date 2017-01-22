@@ -105,7 +105,9 @@ struct ConnpassAPI {
                     }
                     
                     guard let events: [[AnyHashable: Any]] = json.value(with: "events") else { return }
-                    completion?(events.flatMap { ConnpassEvent(dictionary: $0) })
+                    DispatchQueue.main.async {
+                        completion?(events.flatMap { ConnpassEvent(dictionary: $0) })
+                    }
                 } catch (let error) {
                     failure?(error)
                 }
