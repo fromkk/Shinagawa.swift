@@ -14,6 +14,10 @@
 		AD39F8E31E34A45300FFCCF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD39F8E11E34A45300FFCCF4 /* LaunchScreen.storyboard */; };
 		AD39F8EE1E34A45400FFCCF4 /* Shinagawa_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD39F8ED1E34A45400FFCCF4 /* Shinagawa_SwiftTests.swift */; };
 		AD39F8F91E34A45400FFCCF4 /* Shinagawa_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD39F8F81E34A45400FFCCF4 /* Shinagawa_SwiftUITests.swift */; };
+		AD39F9081E34A95300FFCCF4 /* ConnpassAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD39F9071E34A95300FFCCF4 /* ConnpassAPI.swift */; };
+		AD39F90B1E34B5D100FFCCF4 /* DictionaryExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD39F90A1E34B5D100FFCCF4 /* DictionaryExtension.swift */; };
+		AD39F90D1E34BA3300FFCCF4 /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD39F90C1E34BA3300FFCCF4 /* Protocols.swift */; };
+		AD39F9101E34E2F600FFCCF4 /* SafariServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD39F90F1E34E2F600FFCCF4 /* SafariServices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +51,10 @@
 		AD39F8F41E34A45400FFCCF4 /* Shinagawa.SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Shinagawa.SwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD39F8F81E34A45400FFCCF4 /* Shinagawa_SwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shinagawa_SwiftUITests.swift; sourceTree = "<group>"; };
 		AD39F8FA1E34A45400FFCCF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD39F9071E34A95300FFCCF4 /* ConnpassAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnpassAPI.swift; sourceTree = "<group>"; };
+		AD39F90A1E34B5D100FFCCF4 /* DictionaryExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DictionaryExtension.swift; sourceTree = "<group>"; };
+		AD39F90C1E34BA3300FFCCF4 /* Protocols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		AD39F90F1E34E2F600FFCCF4 /* SafariServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SafariServices.framework; path = System/Library/Frameworks/SafariServices.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD39F9101E34E2F600FFCCF4 /* SafariServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +90,7 @@
 				AD39F8EC1E34A45400FFCCF4 /* Shinagawa.SwiftTests */,
 				AD39F8F71E34A45400FFCCF4 /* Shinagawa.SwiftUITests */,
 				AD39F8D61E34A45300FFCCF4 /* Products */,
+				AD39F90E1E34E2F500FFCCF4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -97,6 +107,8 @@
 		AD39F8D71E34A45300FFCCF4 /* Shinagawa.Swift */ = {
 			isa = PBXGroup;
 			children = (
+				AD39F9091E34B5BC00FFCCF4 /* Support */,
+				AD39F9061E34A93E00FFCCF4 /* API */,
 				AD39F8D81E34A45300FFCCF4 /* AppDelegate.swift */,
 				AD39F8DA1E34A45300FFCCF4 /* ViewController.swift */,
 				AD39F8DC1E34A45300FFCCF4 /* Main.storyboard */,
@@ -123,6 +135,33 @@
 				AD39F8FA1E34A45400FFCCF4 /* Info.plist */,
 			);
 			path = Shinagawa.SwiftUITests;
+			sourceTree = "<group>";
+		};
+		AD39F9061E34A93E00FFCCF4 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				AD39F9071E34A95300FFCCF4 /* ConnpassAPI.swift */,
+			);
+			name = API;
+			path = ../API;
+			sourceTree = "<group>";
+		};
+		AD39F9091E34B5BC00FFCCF4 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				AD39F90A1E34B5D100FFCCF4 /* DictionaryExtension.swift */,
+				AD39F90C1E34BA3300FFCCF4 /* Protocols.swift */,
+			);
+			name = Support;
+			path = ../Support;
+			sourceTree = "<group>";
+		};
+		AD39F90E1E34E2F500FFCCF4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AD39F90F1E34E2F600FFCCF4 /* SafariServices.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,8 +301,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD39F90D1E34BA3300FFCCF4 /* Protocols.swift in Sources */,
+				AD39F9081E34A95300FFCCF4 /* ConnpassAPI.swift in Sources */,
 				AD39F8DB1E34A45300FFCCF4 /* ViewController.swift in Sources */,
 				AD39F8D91E34A45300FFCCF4 /* AppDelegate.swift in Sources */,
+				AD39F90B1E34B5D100FFCCF4 /* DictionaryExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,7 +460,7 @@
 				DEVELOPMENT_TEAM = K84E4S7G4C;
 				INFOPLIST_FILE = Shinagawa.Swift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "me.fromkk.Shinagawa-Swift";
+				PRODUCT_BUNDLE_IDENTIFIER = me.fromkk.Shinagawa.Swift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -431,7 +473,7 @@
 				DEVELOPMENT_TEAM = K84E4S7G4C;
 				INFOPLIST_FILE = Shinagawa.Swift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "me.fromkk.Shinagawa-Swift";
+				PRODUCT_BUNDLE_IDENTIFIER = me.fromkk.Shinagawa.Swift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
